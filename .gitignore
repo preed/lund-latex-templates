@@ -1,0 +1,13 @@
+*.aux
+*.log
+.*.sw?
+*.bak
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.run.xml
+*.lot
+*.lof
+*.toc

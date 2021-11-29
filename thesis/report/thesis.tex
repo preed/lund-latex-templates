@@ -1,0 +1,118 @@
+\documentclass[14pt]{extreport}
+
+%TC:macro \cite [ignore]
+%TC:macro \footnote [ignore]
+%TC:macro \parencite [ignore]
+\usepackage[utf8]{inputenc}
+
+\usepackage[american]{babel}
+
+\usepackage[style=apa,backend=biber,date=short]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{\jobname.bib}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{lineno}
+\usepackage{booktabs}
+\usepackage{transparent}
+\usepackage{array}
+\usepackage{pbox}
+\usepackage{tabularx}
+\usepackage{ltablex}
+\usepackage{makecell}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{verbatim}
+\usepackage{hyphenat}
+
+\usepackage{geometry}
+\geometry{
+ a4paper,
+% total={170mm,257mm},
+ top=1in,
+% bottom=1in,
+ left=1in,
+ right=1in,
+% top=20mm,
+ }
+
+\renewcommand\theadfont{\normalsize}
+
+\renewcommand\linenumberfont{\normalfont\footnotesize\sffamily}
+
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+\usepackage{CormorantGaramond}
+\usepackage[T1]{fontenc}
+
+% Hyphenate our fake company name better.
+\hyphenation{Dev-Ops-Co prompt-ed post-inci-dent}
+
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+% Enable for watermark.
+%\usepackage[printwatermark]{xwatermark}
+%\usepackage{xcolor}
+%\usepackage{graphicx}
+%\usepackage{lipsum}
+%\usepackage[draft]{hyperref}
+%\newwatermark[allpages,color=gray!80,angle=45,scale=5,xpos=0,ypos=0]{DRAFT}
+%
+
+\title{
+	{Maps, Context, and Tribal Knowledge:\\On the Structure and Use of Post-Incident Analysis Artifacts in Software Development and Operations}\\
+%	{\large Lund University}\\
+%	{\includegraphics[keepaspectratio=true,width=2.7cm,resolution=600]{lund-university-logo1.pdf}}
+}
+\author{J. Paul Reed}
+\date{Lund 2018}
+
+\begin{document}
+\renewcommand{\thepage}{\roman{page}}
+
+\chapter*{Abstract}
+
+Here's the abstract thoughts I had.
+\par
+\medskip
+This research involves lots of them.
+
+\chapter*{Acknowledgments}
+
+I said a bunch of things about people here.
+\par
+\medskip
+And some more things.
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\chapter{Introduction}
+\setcounter{page}{1}
+\renewcommand{\thepage}{\arabic{page}}
+\input{introduction}
+
+\chapter{Literature Review}
+\input{literature-review}
+
+\chapter{Methodology}
+\input{methodology}
+
+\pagebreak
+
+\printbibliography[title={References:}]
+
+\appendix
+\addcontentsline{toc}{chapter}{Appendices}
+
+\chapter{Survey Questions and Results}
+\input{appendix-survey-results}
+
+\end{document}
